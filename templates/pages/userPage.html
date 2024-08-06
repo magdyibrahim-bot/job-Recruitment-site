@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'parts/fonts.html'%}
+    <link rel="stylesheet" href="{% static 'css/mainuserstyle.css' %}">
+    <title>User Page</title>
+</head>
+<body>
+    {% include 'parts/userNavBar.html'%}
+    <form action="adminPage.html" id="one">
+      <h1>Search by Job Title !</h1>
+      <div id ="input1" class="mb-3">
+        <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="Job Title" onkeyup="myFunction()">
+      </div>
+    </form>
+  <section class="container" id="demo1">
+        <section class="Available-Jobs">
+          <h1>Available Jobs !</h1>
+          <table class="table" id="tb">
+              <thead>
+              <tr>
+                <th  scope="col">ID</th>
+                <th  scope="col">Title</th>
+                <th  scope="col">Salary</th>
+                <th  scope="col">Company Name</th>
+                <th  scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider" id="mb-4">
+              {% for x in job %}
+                <tr>
+                    <td>{{x.number}}</td>
+                    <td>{{x.title}}</td>
+                    <td>{{x.salary}}</td>
+                    <td>{{x.companyName}}</td>
+                    <td><button type="button" class="btn-btn-apply">Apply</button></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+      </section>
+      <section class="Applied_jobs" id="demo2">
+        <h1>Applied Jobs !</h1>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider" id="table-2">
+            </tbody>
+        </table>
+      </section>
+  </section>
+</body>
+<script >
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("exampleFormControlInput1")
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tb");
+    tr = table.getElementsByTagName("tr");
+    for (i = 1; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1)
+            {
+                tr[i].style.display = "";
+            }
+            else {
+                tr[i].style.display = "none";
+            }
+        }       
+    }
+}
+</script> 
+</html>
+{% include 'parts/footer.html'%}

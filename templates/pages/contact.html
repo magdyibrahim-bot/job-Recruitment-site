@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'parts/fonts.html'%}
+        <title>Contact</title>
+        <link rel="stylesheet" href="{% static 'css/contactstyle.css' %}">
+    </head>
+    <body>
+        {% include 'parts/navbar.html'%}
+    <div class="layer">
+        <a href="#">Send Email</a>
+    </div>
+    {% include 'parts/footer.html'%}
+    </body>
+</html>

@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="{%static 'css/navbar.css'%}">
+<header class="header">
+    <div class="navbar">
+        <div class="logo">
+            <h1>Monster</h1>
+        </div>
+        <div class="navlinks" >
+            <ul>
+                <li><a  id="active"href="{% url 'admin' %}">Home</a></li>
+                <li><a href="{% url 'admin' %}">Add Job</a></li>
+                <li><a href="{% url 'available' %}">Available Jobs</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+        <div class="Login">
+        <a href="{% url 'index' %}"><button id="demo5">Log Out</button></a>
+        </div> 
+    </div>
+</header>

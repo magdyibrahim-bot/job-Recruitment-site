@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'parts/fonts.html' %}
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <title>Login page</title>
+    </head>
+    <body>
+        <section class="loginPage">
+            <div class="container">
+                {% include 'parts/navbar.html'%}
+            <div class="login-container">
+                <div class="login-card">
+                    <img src="{%static 'img/loginCard.jpg'%}" alt="">
+
+                    <form class="login-form"  id="login-form" method="post">
+                        {% csrf_token %}
+                        <h2>Welcome Back!</h2>
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger" style="color: red; font-size: 20px;">
+                            {{ form.non_field_errors }}
+                        </div>
+                        {% endif %}
+                        <div class="input-group">
+                            {{ form.username }}
+                        </div>
+                        <div class="input-group">
+                            {{ form.password }}
+                        </div>
+                        <div >
+                            <h2>Choose your Rule:</h2>
+                            {% for radio in form.option %}
+                                <label>{{ radio }} </label>
+                            {% endfor %}
+                        </div>
+                        <div id="error-message-1" class="error-message"></div>
+                        <div class="input-check">
+                            <a href="#">Forget Password</a>
+                            <div>
+                                {{ form.remember_me }}
+                                <label for="cb">Remember Me</label>
+                            </div>
+                        </div>
+                        <button id="LAU" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        {% include 'parts/footer.html'%}
+    </body>
+</html>

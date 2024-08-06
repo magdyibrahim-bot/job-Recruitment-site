@@ -1,0 +1,40 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%include 'parts/fonts.html'%}
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/adminpagetb.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homestyle.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+</head>
+<body>
+    {% include 'parts/adminNavBar.html' %}
+<fieldset>
+    <table>
+        <tr style="display: flex;gap: 20px;background-color: rgb(198, 216, 223)">
+          <th>ID</th>
+          <th>Title</th>
+          <th>Salary</th>
+          <th>Company</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          {% for x in job %}
+            <td>{{x.number}}</td>
+            <td>{{x.title}}</td>
+            <td>{{x.salary}}</td>
+            <td>{{x.companyName}}</td>
+            <td>{{x.status}}</td>
+            <td id="btn"style="display:flex;flex-direction:row;gap: 2px;">
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          {% endfor %}
+      </table>
+    </fieldset>
+    </section>
+</body>
+</html>

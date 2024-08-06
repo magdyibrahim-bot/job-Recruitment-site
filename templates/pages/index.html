@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'parts/fonts.html'%}
+    <title>Job Search Website</title>
+    <link rel="stylesheet" href="{%static 'css/homestyle.css'%}">
+</head>
+<body>
+    <section class="homepage">
+        <div class="container">
+            {% include 'parts/navbar.html'%}
+            <div class="homepage_message">
+                <h1>Find The Best Startup Job That Fit You</h1>
+                <p>Job Search,Careers,Interviewing ,Salary and Compensation,Internships,Employee Benefits, Find the right job or internship for you,Suggested Searches.</p>
+            <div class="innerlinks">
+                <a href="{% url 'login' %}">Search A Job</a>
+                <a href="{% url 'login'%}">Find A Talent</a>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="about"id="demo" >
+        <div class="container">
+             <img src="{% static 'img/about.jpg'%}" alt="aout">
+             <ul>
+                <h1><u>About US</u></h1>
+                <li><h3>Who We Are ?</h3>
+                <p>Welcome to our website! We are a dedicated team of professionals passionate about providing high-quality services to our With years of experience in the industry, we strive to deliver exceptional results.</p>
+               </li>
+               <hr>
+                <li>
+                    <h3>Our Mission</h3>
+                    <p>At our company, our mission is to exceed customer expectations by offering innovative solutions tailored to their needs. We are committed to delivering outstanding customer service and building long-term relationships with our clients.</p>
+                </li>
+                 <hr>
+                <li>
+                    <h3>Our Team</h3>
+                    <p>We have assembled a talented team of experts who are skilled in their respective fields. Our team members are dedicated, creative, and driven to provide the best solutions to our clients. Together, we work towards achieving excellence.</p>
+                </li>
+            </ul>
+      <div class="clear"> </div>
+        </div>
+    </section>
+    {% include 'parts/footer.html'%}
+</body>
+</html>

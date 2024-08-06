@@ -1,0 +1,75 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'parts/fonts.html'%}
+        <title>Job Search Website</title>
+        <link rel="stylesheet" href="{%static 'css/usersignstyle.css'%}">
+    </head>
+    <body>
+        <div class="signupsection">
+            <div class="container">
+                {% include 'parts/navbar.html'%}
+            </div>
+        </div>
+        <fieldset>
+            <form id="registration-form" method="POST">
+                {%csrf_token%}
+                <div class="head">
+                    <h1>Registeration Form</h1>
+                </div>
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger" style="color: red; font-size: 20px; " >
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+                <table>
+                    <tr>
+                        <td>
+                            {{ form.username }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{form.mail}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{form.password}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{form.rePassword}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="usertype">
+                                <h3>Choose your talant</h3>
+                            </label></td>
+                    </tr>
+                    {% for radio in form.talent %}
+                    <tr>
+                        <td>
+                            {{radio}}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td>
+                            <input type="submit" value="Sign Up" href="{% url 'user' %}" name="add">
+                        </td>
+                        <td>
+                            <input type="reset" value="Reset Data">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="end">Are You have Already Account?<a href="{% url 'login' %}">Sign in</a></td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+        {% include 'parts/footer.html'%}
+    </body>
+</html>

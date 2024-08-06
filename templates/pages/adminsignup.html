@@ -1,0 +1,67 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'parts/fonts.html'%}
+        <title>Admin Signup Page</title>
+        <link rel="stylesheet" href="{% static 'css/adminsignup.css' %}">
+    </head>
+    <body>
+        <div class="adminsign">
+            {% include 'parts/navbar.html' %}
+            <fieldset>
+                <form  id="registration-form" method="post">
+                    {% csrf_token %}
+                    <h1>Registeration Form</h1>
+                    {% if form.non_field_errors %}
+                    <div class="alert alert-danger" style="color: red; font-size: 20px; " >
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+                    <table>
+                        <tr>
+                            <td>
+                                {{form.username}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{form.mail}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{form.password}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{form.rePassword}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{form.companyName}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input  href="" type="submit" value="Sign Up">
+                            </td>
+
+                            <td>
+                                <input type="reset" value="Reset Data">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Are You have Already Account?
+                                <a id="alt" href="{% url 'login' %}">Sign in</a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+        </div>
+        {%include 'parts/footer.html'%}
+    </body>
+</html>

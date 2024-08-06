@@ -1,0 +1,30 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'parts/fonts.html'%}
+        <link rel="stylesheet" href="{% static 'css/applystyle.css' %}">
+    </head>
+    <body>
+        <section class="apply">
+            {% include 'parts/userNavBar.html'%}
+        </section>
+        <fieldset>
+            <h1>Join our team!</h1>
+            <form action="">
+                <div>
+                    <input type="tel" id="phone" name="phone"placeholder="Enter your phone number"required>
+                </div>
+                <div>
+                    <input type="text"id="nationality" required placeholder="Enter your nationality"required>
+                </div>
+                <div>
+                    <button>Upload Resume</button>
+                </div>
+                <button><a href="userPage.html">Apply</a></button>
+            </form>
+        </fieldset>
+        <img src="{% static 'img/apply2.jpg' %}" alt="apply">
+        {% include 'parts/footer.html'%}
+    </body>
+</html>
