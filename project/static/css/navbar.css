@@ -1,0 +1,50 @@
+.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    padding: 20px 20px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.227);
+}
+.navbar h1
+{
+    margin-left: 40px;
+    color: white;
+}
+.navbar button
+{
+    font-family: "Poppins", sans-serif;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 20%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.278);
+    color: white;
+}
+.navbar button:hover
+{
+    background-color: white;
+    color: black;
+}
+.navbar ul
+{
+    list-style-type: none;
+}
+.navbar a
+{   
+ text-decoration: none;
+ color: white;
+}
+
+.navbar a:hover 
+{
+    border-bottom: 2px solid white;
+}
+.navbar li
+{
+    display: inline-block;
+    padding-right: 40px;
+}

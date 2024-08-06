@@ -1,0 +1,204 @@
+*
+{
+    box-sizing: border-box;
+}
+.navbar{
+    margin-top: -70px;
+}
+body
+{
+    margin: 0;
+    background-image: url(/static/img/flat-lay-minimalistic-geometrical-figures-with-copy-space.jpg);
+    background-size: cover;
+    position: relative;
+
+}
+
+#demo1
+{
+    transform: translateY(15%);
+}
+form
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.348);
+    margin-top: 70px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transform: translateY(30%);
+  
+}
+form h1
+{
+    font-family: "Montserrat", sans-serif;
+    padding: 20px;
+    font-size: 35px;
+    font-weight: 700;
+    color:rgb(4, 4, 45,0.8);
+}
+#input1 ,#input2
+{
+    position: relative;
+    width: 40%;
+    font-family: "Montserrat", sans-serif ;
+    margin-top: 10px;
+
+}
+#viewbtn
+{
+    margin-top: 10px;
+}
+#input1 button , #input2 button
+{
+    position: absolute;
+    left: 472px;
+    top: 0.8px;
+    border: none;
+    cursor: pointer;
+}
+.container
+{
+    background-color: rgba(128, 128, 128, 0.348);
+    margin-top: 20px;
+    padding: 20px;
+}
+.Applied_jobs
+{
+    margin-top: 80px;
+}
+.container h1
+{
+    font-family:"Montserrat", sans-serif; 
+    font-weight: 500;
+    color: white;
+}
+
+body {
+    font-family: 'lato', sans-serif;
+  }
+  .container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+    small {
+      font-size: 0.5em;
+    }
+}
+
+.input1,input2 {
+    position: relative;
+    margin: 20px auto;
+    max-width: 400px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+.form-control:focus {
+    outline: none;
+    border-color: #3666b3;
+}
+.btn-btn-primary {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background-color: #3666b3;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-btn-primary:hover {
+    background-color: #2b425b;
+}
+.btn-btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-btn-success {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    background-color: #3666b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+.btn-btn-success:hover {
+    background-position: right center;
+    background-color: #2b425b;
+}
+.btn-btn-success:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-btn-apply {
+    position: absolute;
+    padding: 10px 18px;
+    margin-top: -16px;
+    margin-left: -32px;
+    background-color: #3666b3;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-btn-apply:hover {
+    background-color: #2b425b;
+}
+.btn-btn-apply:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-btn-apply a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+th {
+    background-color: #3666b3;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}

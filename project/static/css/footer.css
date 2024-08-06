@@ -1,0 +1,41 @@
+footer
+{
+    margin-top: 80px;
+    background-color: rgba(0, 0, 0, 0.859);
+    border-radius:  5px;
+    width: 100%;
+    text-align: center;
+}
+.icons .fa-brands
+{
+    width:30px;
+    font-size: 30px;
+    margin-left: 30px;
+    padding-top: 20px;
+    color: white;
+}
+footer .quick_links ul
+{
+    list-style-type: none;
+    display: flex;
+    margin-left: 22%;
+    padding-top: 20px;
+}
+footer .quick_links li a
+{
+  text-decoration: none;
+  margin-left: 30px;
+  color:white;
+  font-family:"Poppins", sans-serif ;
+}
+footer .quick_links a:hover
+{
+    border-bottom: white solid 2px;
+}
+footer .end
+{
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+

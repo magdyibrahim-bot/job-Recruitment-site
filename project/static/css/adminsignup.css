@@ -1,0 +1,77 @@
+body{
+    background-image: url(/static/img/adminSignUp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.adminsign{
+    height: 115vh;
+    position: relative;
+}
+fieldset {
+    position:absolute;
+    top: 150px;
+    left: 10%;
+    background-color:rgba(233, 228, 228, 0.55);
+    width: 450px;
+    border: 20px;
+    border-radius: 20px;
+    padding: 20px 20px;
+}
+
+form input[type="text"],
+[type="password"],
+[type=email] {
+    border-radius: 10px;
+    padding: 5px;
+    border: 0;
+    width: 150%;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+fieldset h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color:black;
+    font-style: oblique;
+    text-align: center;
+    border-radius: 5%;
+    padding: 10px 0px;
+}
+
+form input[type="submit"],
+[type="reset"] {
+    border-radius: 20px;
+    border: 0;
+    padding: 7px 7px;
+    margin-top: 12px;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+form table tr  a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-left: 2px;
+}
+form input[type="submit"]:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+form input[type="reset"]:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
