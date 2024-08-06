@@ -1,0 +1,57 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+}
+ section
+ {
+    top:0;
+    left: 0;
+    height: 100vh;
+   background-image: url(/static/img/young-people-working-together-startup-company.jpg);
+   background-size: cover;
+   position: relative;
+ }
+
+ table
+ {
+    position: absolute;
+    top:35%;
+    left: 25%;
+    background-color: rgba(255, 255, 255, 0.605);
+    font-family: "Montserrat", sans-serif;
+    border: solid 1px white;
+ }
+ .heads
+ {
+   padding: 30px;
+ }
+table tr
+{
+ display: flex;
+ flex-direction: row;
+gap: 20px;
+padding: 30px 10px;
+font-size: 19px;
+border: solid 3px white;
+font-size: 22px;
+font-weight: 500;
+}
+table tr td button
+{
+    margin-left: 5px;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 2px rgb(198, 216, 223);
+}
+table tr td button:hover
+{
+    background-color:rgb(198, 216, 223) ;
+   
+}
+
+

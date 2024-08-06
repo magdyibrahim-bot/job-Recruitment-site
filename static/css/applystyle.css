@@ -1,0 +1,86 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url(/static/img/apply\ for\ job.jpg);
+    position: relative;
+    background-size: cover;
+    margin: 0;
+}
+section
+{
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+fieldset
+{
+    position: absolute;
+    top:200px;
+    left:180px ;
+    padding: 10px 40px 40px 20px;
+    border-radius: 20px;
+    transition: transform 1s;
+}
+fieldset:hover
+{
+    transform: scale(1.3);
+}
+fieldset h1
+{
+    font-size: 40px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-style: oblique;
+}
+form input
+{
+    padding: 10px 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+form button
+{
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 5px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 0;
+    background-color: rgb(187, 186, 186,0.5);
+    color: white;
+}
+form button:hover
+{
+  color: black;
+  background-color: white;
+}
+img
+{
+    position: absolute;
+    width: 32%;
+    top: 30%;
+    left: 60%;
+    margin-top: -70px;
+    border-radius: 15%;
+    border-style: groove;
+    transition: transform 1s;
+}
+img:hover
+{
+    transform: scale(1.3);
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+button a:hover{
+    color: black;
+  background-color: white;
+}
